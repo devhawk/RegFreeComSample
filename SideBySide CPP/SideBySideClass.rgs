@@ -1,0 +1,27 @@
+HKCR
+{
+	SideBySide.SideBySideClass.1 = s 'SideBySideClass Class'
+	{
+		CLSID = s '{4B72FC46-C543-4101-80DB-7777848D1357}'
+	}
+	SideBySide.SideBySideClass = s 'SideBySideClass Class'
+	{
+		CLSID = s '{4B72FC46-C543-4101-80DB-7777848D1357}'
+		CurVer = s 'SideBySide.SideBySideClass.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4B72FC46-C543-4101-80DB-7777848D1357} = s 'SideBySideClass Class'
+		{
+			ProgID = s 'SideBySide.SideBySideClass.1'
+			VersionIndependentProgID = s 'SideBySide.SideBySideClass'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{E6A9CD40-8559-4e17-A0D9-C68B038B4FA0}'
+		}
+	}
+}

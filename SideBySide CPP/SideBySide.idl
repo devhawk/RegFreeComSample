@@ -1,0 +1,37 @@
+// SideBySide.idl : IDL source for SideBySide
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SideBySide.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(CBA85B94-9C11-43aa-84F6-30B90145FD3E),
+	dual,
+	nonextensible,
+	helpstring("ISideBySideClass Interface"),
+	pointer_default(unique)
+]
+interface ISideBySideClass : IDispatch{
+	[id(1), helpstring("method Version")] HRESULT Version([out,retval] BSTR* pVer);
+};
+[
+	uuid(E6A9CD40-8559-4e17-A0D9-C68B038B4FA0),
+	version(1.0),
+	helpstring("SideBySide 1.0 Type Library")
+]
+library SideBySideLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(4B72FC46-C543-4101-80DB-7777848D1357),
+		helpstring("SideBySideClass Class")
+	]
+	coclass SideBySideClass
+	{
+		[default] interface ISideBySideClass;
+	};
+};

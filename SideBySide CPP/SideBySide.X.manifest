@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+<assemblyIdentity
+	type="win32"
+	name="SideBySide.X"
+	version="1.0.0.0" />
+
+<file name = "SideBySide.dll">
+
+<comClass
+    clsid="{4B72FC46-C543-4101-80DB-7777848D1357}"
+    threadingModel = "Apartment" />
+
+<typelib tlbid="{E6A9CD40-8559-4E17-A0D9-C68B038B4FA0}"
+       version="1.0" helpdir=""/>
+
+</file>
+
+<comInterfaceExternalProxyStub 
+    name="ISideBySideClass" 
+    iid="{CBA85B94-9C11-43aa-84F6-30B90145FD3E}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"
+    baseInterface="{00000000-0000-0000-C000-000000000046}"
+    tlbid = "{E6A9CD40-8559-4E17-A0D9-C68B038B4FA0}" />
+
+</assembly>
